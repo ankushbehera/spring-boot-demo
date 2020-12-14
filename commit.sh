@@ -1,6 +1,6 @@
 message=$1
 if [ -z "$message" ]; then
-    message="checked in by script"
+    message="added by script"
 fi
 
 git add .
