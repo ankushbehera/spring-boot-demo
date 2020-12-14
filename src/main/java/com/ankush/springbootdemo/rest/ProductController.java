@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.*;
 
 @RestController
-@RequestMapping("/productss")
+@RequestMapping("/product")
 public class ProductController {
     @Autowired
     private ProductService productService;
