@@ -1,9 +1,9 @@
 package com.ankush.springbootdemo.repository;
 
-import com.ankush.springbootdemo.model.*;
-import org.springframework.data.repository.reactive.*;
-import org.springframework.stereotype.*;
+import com.ankush.springbootdemo.model.Product;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProductRepository extends ReactiveCrudRepository<Product, Integer> {
+public interface ProductRepository extends MongoRepository<Product, Integer> {
 }
