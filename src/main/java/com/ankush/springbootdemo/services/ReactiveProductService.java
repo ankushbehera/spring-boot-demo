@@ -25,7 +25,7 @@ public class ReactiveProductService {
         if(id == 0)
             id = Math.abs(new Random().nextInt());
         product.setId(id);
-        return reactiveProductRepository.save(product).delayElement(Duration.ofMillis(1));
+        return reactiveProductRepository.save(product).delayElement(Duration.ofMillis(1000));
     }
 
     public Mono<Product> getProductById(int id) {

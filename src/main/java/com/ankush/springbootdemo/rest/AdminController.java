@@ -1,7 +1,10 @@
 package com.ankush.springbootdemo.rest;
 
-import com.ankush.springbootdemo.model.*;
-import org.springframework.web.bind.annotation.*;
+
+import com.ankush.springbootdemo.model.PingResponse;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("admin/v1")

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 @Service
 public class ProductService {
@@ -17,7 +18,7 @@ public class ProductService {
 
     public List<Product> getAllProducts() {
         return productRepository.findAll();
-    }
+    };
 
     public Product save(Product product, int id) {
         if(id == 0)
@@ -25,7 +26,7 @@ public class ProductService {
         product.setId(id);
         productRepository.save(product);
         try {
-            Thread.sleep(3000);
+            TimeUnit.MILLISECONDS.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
