@@ -2,7 +2,6 @@ message=$1
 if [ -z "$message" ]; then
     message="added by script"
 fi
-
 git add .
 git commit -a -m "$message"
 git push
