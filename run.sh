@@ -1,1 +1,1 @@
-git add -A && git commit -m "added by script"
+git commit -am "added by script"
