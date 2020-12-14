@@ -8,6 +8,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: "ankush"
       MONGO_INITDB_ROOT_PASSWORD: "ankush"
   run-spring-boot-demo:
+    container_name: run-spring-boot-demo
     build:
       context: .
     ports:
