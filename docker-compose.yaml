@@ -19,15 +19,3 @@ services:
       MONGO_INITDB_ROOT_USERNAME: "ankush"
       MONGO_INITDB_ROOT_PASSWORD: "ankush"
       SPRING_DATA_MONGODB_URI: "mongodb://ankush:ankush@mongodb:27017/admin"
-#  run-spring-boot-demo-git:
-#    build:
-#      context: .
-#    ports:
-#      - "8081:8081"
-#    depends_on:
-#      - mongodb
-#    entrypoint: ["mvn", "spring-boot:run"]
-#    environment:
-#      MONGO_INITDB_ROOT_USERNAME: "ankush"
-#      MONGO_INITDB_ROOT_PASSWORD: "ankush"
-#      SPRING_DATA_MONGODB_URI: "mongodb://ankush:ankush@10.177.199.20:27017/admin"

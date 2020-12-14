@@ -1,3 +1,3 @@
 FROM maven:3.6-jdk-11
-COPY . /usr/src/spring-boot-demo
+RUN ["sh","docker_mvn.sh"]
 WORKDIR /usr/src/spring-boot-demo
