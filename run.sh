@@ -1,1 +1,3 @@
-git commit -am "added by script"
+git add .
+git commit -a -m "$1"
+git push
