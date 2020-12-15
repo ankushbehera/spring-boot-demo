@@ -1,0 +1,57 @@
+info:
+  title: test
+  version: 1.0.0
+consumes:
+  - application/json
+produces:
+  - application/json
+swagger: '2.0'
+securityDefinitions:
+  keystone:
+    description: OpenStack Keystone Authentication
+    type: apiKey
+    in: header
+    name: x-auth-token
+security: []
+basePath: /demo
+paths:
+  /product:
+    get:
+      operationId: ListProduct
+      summary: List available Products
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ProductModel'
+      security:
+        - keystone: []
+    post:
+      operationId: CreateProduct
+      summary: Create a Product
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/ProductModel'
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ProductModel'
+      security:
+        - keystone: []
+
+definitions:
+  ProductModel:
+    type: object
+    properties:
+      id:
+        description: id of the product
+        type: integer
+      title:
+        description: title of the product
+        type: string
