@@ -12,5 +12,5 @@ if [ -z "$CONTAINER_ID" ]; then
     docker-compose build --no-cache
     docker-compose up -d
 else
-    winpty docker exec -it $CONTAINER_ID bash docker/docker_mvn.sh
+    winpty docker exec -it $CONTAINER_ID bash spring-boot-demo-core/docker/docker_mvn.sh
 fi

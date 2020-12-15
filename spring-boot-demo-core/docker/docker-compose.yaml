@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "ankush"
+      MONGO_INITDB_ROOT_PASSWORD: "ankush"
+  run-spring-boot-demo:
+    container_name: run-spring-boot-demo
+    build:
+      context: ""
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongodb
+    entrypoint: ["mvn", "spring-boot:run"]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "ankush"
+      MONGO_INITDB_ROOT_PASSWORD: "ankush"
+      SPRING_DATA_MONGODB_URI: "mongodb://ankush:ankush@mongodb:27017/admin"
